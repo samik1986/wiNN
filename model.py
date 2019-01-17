@@ -12,10 +12,16 @@ import pandas as pd
 ft = np.load('trainData.npy')
 lbl = np.load('trainLabel.npy')
 
+# print lbl
+
 # print ft.shape[1]
 
-k = 5
+k = 1
 
-nbr = kNN(n_neighbors=k, weights='distance').fit(ft,lbl)
+print  "no thing"
+
+nbr = kNN(n_neighbors=k).fit(ft,lbl)
+
+print "some thing"
 
 np.save('model.npy',nbr)
